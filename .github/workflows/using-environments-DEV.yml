@@ -15,6 +15,7 @@ jobs:
   Prod-Job:
     runs-on: ubuntu-latest
     environment: PROD
+    needs: [ Dev-Job ]
     steps:
       - name: Run on dev
         run: echo Hello, PROD!
